@@ -19,6 +19,7 @@ uint32_t sys_prints(void *buf, size_t len);
 int sys_open(uint8_t *pathname, int32_t flags);
 int sys_ftruncate(int fd, size_t length);
 uint32_t sys_mmap(void *addr, size_t length, int prot, int flags, int fd, size_t offset);
+int sys_munmap(void *addr, size_t length);
 void sys_halt();
 
 #endif

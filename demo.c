@@ -1,9 +1,13 @@
 #include <syscall.h>
 #include <unistd.h>
+#include <mem.h>
 
 int i, a;
 
 void _start(){
+	if (mem_init())
+		printf("Cannot perform mem_init!\n");
+
 	a = 0;
 	for (i = 0; i < 1024; ++i){
 		++a;

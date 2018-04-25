@@ -3,7 +3,7 @@ LD=i686-elf-ld
 CC=i686-elf-gcc
 AS=i686-elf-as
 
-CFLAGS=-I./include -nostdlib -ffreestanding
+CFLAGS=-I./include -nostdlib -ffreestanding -g
 
 LDFLAGS=-T linker.ld
 
@@ -20,6 +20,7 @@ lib/printf.o \
 lib/file.o \
 lib/ftruncate.o \
 lib/exit.o \
+lib/mem.o \
 lib/string/memcpy.o \
 lib/string/memcmp.o \
 lib/string/memmove.o \

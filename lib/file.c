@@ -15,4 +15,8 @@ void *mmap(void *addr, size_t length, int prot, int flags,
 {
 	return sys_mmap(addr, length, prot, flags, fd, offset);
 }
+int sys_munmap(void *addr, size_t length)
+{
+	return sys_munmap(addr, length);
+}
 int munmap(void *addr, size_t length);
