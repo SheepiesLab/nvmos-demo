@@ -12,16 +12,19 @@ size_t lseek(int fd, size_t offset, int whence);
 int ftruncate(int fd, size_t length);
 
 void *mmap(void *addr, size_t length, int prot, int flags,
-		int fd, size_t offset);
+		   int fd, size_t offset);
 int munmap(void *addr, size_t length);
 
 int printf(const char *format, ...);
 
 void *malloc(size_t size);
 void free(void *ptr);
-void *calloc(size_t nmemb, size_t size);
-void *realloc(void *ptr, size_t size);
 
 void exit();
+
+#define MIN(X, Y) ((X) < (Y) ? (X) \
+				   : (Y))
+#define MAX(X, Y) ((X) > (Y) ? (X) \
+				   : (Y))
 
 #endif
