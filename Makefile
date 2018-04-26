@@ -15,6 +15,7 @@ libsys/sys_prints.o \
 libsys/sys_open.o \
 libsys/sys_ftruncate.o \
 libsys/sys_mmap.o \
+libsys/sys_munmap.o \
 libsys/sys_halt.o \
 lib/printf.o \
 lib/file.o \
