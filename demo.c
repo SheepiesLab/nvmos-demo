@@ -50,22 +50,10 @@ void _start()
 	read(hellofd2, buf, 35);
 	printf("Test opened file: %s\n", buf);
 
-	void *mallocaddrs[20];
-	for (i = 1; i < 20; ++i)
+	void *mallocaddrs[50];
+	for (i = 1; i < 50; ++i)
 	{
-		printf("Test malloc: %p\n", (uint64_t)(mallocaddrs[i] = malloc(i)));
-	}
-	for (i = 1; i < 20; ++i)
-	{
-		free(mallocaddrs[i]);
-	}
-	for (i = 1; i < 20; ++i)
-	{
-		printf("Test malloc: %p\n", (uint64_t)(mallocaddrs[i] = malloc(i)));
-	}
-	for (i = 1; i < 20; ++i)
-	{
-		free(mallocaddrs[i]);
+		printf("Test malloc %d bytes: %p\n", i, (uint64_t)(mallocaddrs[i] = malloc(i)));
 	}
 
 	exit();
